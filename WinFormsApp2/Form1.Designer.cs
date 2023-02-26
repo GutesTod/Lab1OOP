@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp2
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -25,5 +25,11 @@
         private TabPage tab_page2;
         private Button btn_prev;
         private Button btn_next;
+        private Label infoTextSave;
+        private TextBox textBoxSave;
+        private Label label_page1;
+        private Label label_page2;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem createNewWindowToolStripMenuItem;
     }
 }
