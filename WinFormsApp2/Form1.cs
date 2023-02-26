@@ -51,16 +51,17 @@ namespace WinFormsApp2
             // 
             this.btn_prev.Location = new System.Drawing.Point(4, 178);
             this.btn_prev.Name = "btn_prev";
-            this.btn_prev.Size = new System.Drawing.Size(75, 23);
+            this.btn_prev.Size = new System.Drawing.Size(75, 32);
             this.btn_prev.TabIndex = 0;
             this.btn_prev.Text = "Prev";
             this.btn_prev.UseVisualStyleBackColor = true;
+            this.btn_prev.Click += new System.EventHandler(this.btn_prev_Click);
             // 
             // btn_next
             // 
             this.btn_next.Location = new System.Drawing.Point(225, 178);
             this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(75, 23);
+            this.btn_next.Size = new System.Drawing.Size(75, 32);
             this.btn_next.TabIndex = 1;
             this.btn_next.Text = "Next";
             this.btn_next.UseVisualStyleBackColor = true;
@@ -80,7 +81,18 @@ namespace WinFormsApp2
 
         private void btn_next_Click(object sender, EventArgs e)
         {
+            if (tabControl1.SelectedIndex < tabControl1.TabPages.Count)
+            {
+                tabControl1.SelectedIndex++;
+            }
+        }
 
+        private void btn_prev_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex > 0)
+            {
+                tabControl1.SelectedIndex--;
+            }
         }
     }
 }
