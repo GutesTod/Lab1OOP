@@ -39,10 +39,10 @@ namespace WinFormsApp2
             // tab_page1
             // 
             this.tab_page1.Controls.Add(this.label_page1);
-            this.tab_page1.Location = new System.Drawing.Point(4, 24);
+            this.tab_page1.Location = new System.Drawing.Point(4, 29);
             this.tab_page1.Name = "tab_page1";
             this.tab_page1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_page1.Size = new System.Drawing.Size(250, 131);
+            this.tab_page1.Size = new System.Drawing.Size(250, 126);
             this.tab_page1.TabIndex = 0;
             this.tab_page1.Text = "Page 1";
             this.tab_page1.UseVisualStyleBackColor = true;
@@ -53,16 +53,16 @@ namespace WinFormsApp2
             this.label_page1.Location = new System.Drawing.Point(3, 3);
             this.label_page1.MaximumSize = new System.Drawing.Size(250, 131);
             this.label_page1.Name = "label_page1";
-            this.label_page1.Size = new System.Drawing.Size(0, 15);
+            this.label_page1.Size = new System.Drawing.Size(0, 20);
             this.label_page1.TabIndex = 0;
             // 
             // tab_page2
             // 
             this.tab_page2.Controls.Add(this.label_page2);
-            this.tab_page2.Location = new System.Drawing.Point(4, 24);
+            this.tab_page2.Location = new System.Drawing.Point(4, 29);
             this.tab_page2.Name = "tab_page2";
             this.tab_page2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_page2.Size = new System.Drawing.Size(250, 131);
+            this.tab_page2.Size = new System.Drawing.Size(250, 126);
             this.tab_page2.TabIndex = 1;
             this.tab_page2.Text = "Page 2";
             this.tab_page2.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@ namespace WinFormsApp2
             this.label_page2.Location = new System.Drawing.Point(3, 3);
             this.label_page2.MaximumSize = new System.Drawing.Size(250, 131);
             this.label_page2.Name = "label_page2";
-            this.label_page2.Size = new System.Drawing.Size(0, 15);
+            this.label_page2.Size = new System.Drawing.Size(0, 20);
             this.label_page2.TabIndex = 0;
             // 
             // btn_prev
@@ -101,7 +101,7 @@ namespace WinFormsApp2
             this.infoTextSave.AutoSize = true;
             this.infoTextSave.Location = new System.Drawing.Point(280, 58);
             this.infoTextSave.Name = "infoTextSave";
-            this.infoTextSave.Size = new System.Drawing.Size(70, 15);
+            this.infoTextSave.Size = new System.Drawing.Size(89, 20);
             this.infoTextSave.TabIndex = 2;
             this.infoTextSave.Text = "Ввод текста";
             // 
@@ -116,24 +116,25 @@ namespace WinFormsApp2
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createNewWindowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1288, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1018, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // createNewWindowToolStripMenuItem
             // 
             this.createNewWindowToolStripMenuItem.Name = "createNewWindowToolStripMenuItem";
-            this.createNewWindowToolStripMenuItem.Size = new System.Drawing.Size(142, 20);
+            this.createNewWindowToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.createNewWindowToolStripMenuItem.Text = "Создание нового окна";
             this.createNewWindowToolStripMenuItem.Click += new System.EventHandler(this.createNewWindowToolStripMenuItem_Click);
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(1288, 417);
+            this.ClientSize = new System.Drawing.Size(1018, 417);
             this.Controls.Add(this.textBoxSave);
             this.Controls.Add(this.infoTextSave);
             this.Controls.Add(this.btn_next);
