@@ -59,11 +59,11 @@ namespace WinFormsApp2
         {
             if (this.trackBarSizeForm.Value > int_trackbar)
             {
-                this.Size = new Size(this.Width + trackBarSizeForm.Value, this.Height + trackBarSizeForm.Value);
+                this.Size = new Size(this.Width + 10, this.Height + 10);
             }
             else
             {
-                this.Size = new Size(this.Width - trackBarSizeForm.Value, this.Height - trackBarSizeForm.Value);
+                this.Size = new Size(this.Width - 10, this.Height - 10);
             }
         }
 
