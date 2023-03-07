@@ -1,3 +1,5 @@
+using System.DirectoryServices.ActiveDirectory;
+
 namespace WinFormsApp2
 {
     public partial class MainForm : Form
@@ -152,10 +154,16 @@ namespace WinFormsApp2
             this.progressBarShow.Location = new System.Drawing.Point(576, 132);
             this.progressBarShow.Name = "progressBarShow";
             this.progressBarShow.Size = new System.Drawing.Size(125, 29);
+            this.progressBarShow.Step = 5;
+            this.progressBarShow.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBarShow.TabIndex = 6;
+            this.progressBarShow.Visible = false;
+            this.progressBarShow.Minimum = 0;
+            this.progressBarShow.Maximum = 20;
             // 
             // timerProgressBar
             // 
+            this.timerProgressBar.Interval = 10;
             this.timerProgressBar.Tick += new System.EventHandler(this.timerProgressBar_Tick);
             // 
             // MainForm
@@ -226,6 +234,10 @@ namespace WinFormsApp2
                 {
                     progressBarShow.Increment(5);
                 }
+                else
+                {
+                    timerProgressBar.Stop();
+                }
             }
         }
 
@@ -234,6 +246,7 @@ namespace WinFormsApp2
             if (showProgressBar.Checked)
             {
                 progressBarShow.Visible = true;
+                timerProgressBar.Start();
             }
             else
             {
