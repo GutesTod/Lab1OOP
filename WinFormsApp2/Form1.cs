@@ -9,6 +9,7 @@ namespace WinFormsApp2
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_page1 = new System.Windows.Forms.TabPage();
             this.label_page1 = new System.Windows.Forms.Label();
@@ -20,6 +21,9 @@ namespace WinFormsApp2
             this.textBoxSave = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.createNewWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showProgressBar = new System.Windows.Forms.CheckBox();
+            this.progressBarShow = new System.Windows.Forms.ProgressBar();
+            this.timerProgressBar = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tab_page1.SuspendLayout();
             this.tab_page2.SuspendLayout();
@@ -132,9 +136,33 @@ namespace WinFormsApp2
             this.createNewWindowToolStripMenuItem.Text = "Создание нового окна";
             this.createNewWindowToolStripMenuItem.Click += new System.EventHandler(this.createNewWindowToolStripMenuItem_Click);
             // 
+            // showProgressBar
+            // 
+            this.showProgressBar.AutoSize = true;
+            this.showProgressBar.Location = new System.Drawing.Point(576, 91);
+            this.showProgressBar.Name = "showProgressBar";
+            this.showProgressBar.Size = new System.Drawing.Size(161, 24);
+            this.showProgressBar.TabIndex = 5;
+            this.showProgressBar.Text = "Запустить загрузку";
+            this.showProgressBar.UseVisualStyleBackColor = true;
+            this.showProgressBar.CheckedChanged += new System.EventHandler(this.showProgressBar_CheckedChanged);
+            // 
+            // progressBarShow
+            // 
+            this.progressBarShow.Location = new System.Drawing.Point(576, 132);
+            this.progressBarShow.Name = "progressBarShow";
+            this.progressBarShow.Size = new System.Drawing.Size(125, 29);
+            this.progressBarShow.TabIndex = 6;
+            // 
+            // timerProgressBar
+            // 
+            this.timerProgressBar.Tick += new System.EventHandler(this.timerProgressBar_Tick);
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(1018, 417);
+            this.Controls.Add(this.progressBarShow);
+            this.Controls.Add(this.showProgressBar);
             this.Controls.Add(this.textBoxSave);
             this.Controls.Add(this.infoTextSave);
             this.Controls.Add(this.btn_next);
@@ -188,6 +216,29 @@ namespace WinFormsApp2
         {
             ParentForm form = new ParentForm();
             form.Show();
+        }
+
+        private void timerProgressBar_Tick(object sender, EventArgs e)
+        {
+            if (progressBarShow.Visible)
+            {
+                if (progressBarShow.Value < progressBarShow.Maximum)
+                {
+                    progressBarShow.Increment(5);
+                }
+            }
+        }
+
+        private void showProgressBar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showProgressBar.Checked)
+            {
+                progressBarShow.Visible = true;
+            }
+            else
+            {
+                progressBarShow.Visible = false;
+            }
         }
     }
 }

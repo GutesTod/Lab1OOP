@@ -31,5 +31,8 @@
         private Label label_page2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem createNewWindowToolStripMenuItem;
+        private CheckBox showProgressBar;
+        private ProgressBar progressBarShow;
+        private System.Windows.Forms.Timer timerProgressBar;
     }
 }
